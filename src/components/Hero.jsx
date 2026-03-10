@@ -50,15 +50,15 @@ const Hero = () => {
  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
  className="flex flex-col sm:flex-row items-center gap-4 justify-center"
  >
- <button className="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-lg font-medium text-lg flex items-center justify-center gap-2 group">
+ <a href="#courses" className="btn-primary w-full sm:w-auto px-8 py-3.5 rounded-lg font-medium text-lg flex items-center justify-center gap-2 group">
  Start Learning
  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
- </button>
+ </a>
  
- <button className="btn-secondary w-full sm:w-auto px-8 py-3.5 rounded-lg font-medium text-lg flex items-center justify-center gap-2 group">
+ <a href="#videocorner" className="btn-secondary w-full sm:w-auto px-8 py-3.5 rounded-lg font-medium text-lg flex items-center justify-center gap-2 group">
  <Play className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
  Watch Demo
- </button>
+ </a>
  </motion.div>
 
  {/* Video / App Preview UI */}

@@ -1,12 +1,30 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-primary: #2A2522; /* Dark espresso brown for text */
   --color-secondary: #5A4E46; /* Muted brown for secondary text */
   --color-accent: #F2BFA4; /* The requested pastel peach accent */
   --color-bg-base: #F5E7DE; /* The requested pastel beige background */
   --color-bg-card: #FAF4F0; /* Slightly lighter for cards */
   --color-border: #E8D3C5; /* Slightly darker than base for subtle borders */
+}
+
+.dark {
+  --color-primary: #FDF8F5; /* Very light peachy white for text */
+  --color-secondary: #D4C3BA; /* Muted light brown for secondary text */
+  --color-accent: #D16B3A; /* Stronger peach accent for dark backgrounds */
+  --color-bg-base: #1A1614; /* Very dark espresso base */
+  --color-bg-card: #241F1C; /* Slightly lighter dark espresso for cards */
+  --color-border: #3D3530; /* Dark border */
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-bg-base: var(--color-bg-base);
+  --color-bg-card: var(--color-bg-card);
+  --color-border: var(--color-border);
   --font-sans: 'Lora', 'Playfair Display', Georgia, serif; /* Vintage serif font for elegant look */
 }
 
