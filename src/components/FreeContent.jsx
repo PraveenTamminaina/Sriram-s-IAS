@@ -70,31 +70,31 @@ const FreeContent = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, delay: 0.1 }}
             whileHover={{ y: -5 }}
-            className="lg:col-span-4 lg:row-span-1 bg-[#2A2522] text-[var(--color-bg-base)] rounded-3xl p-8 shadow-xl flex flex-col justify-between relative overflow-hidden group cursor-pointer"
+            className="lg:col-span-4 lg:row-span-1 bg-[#2A2522] dark:bg-[var(--color-accent)] text-[var(--color-bg-base)] rounded-3xl p-8 shadow-xl flex flex-col justify-between relative overflow-hidden group cursor-pointer"
           >
             {/* Background Texture in Dark block */}
             <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZiIvPgo8L3N2Zz4=')]"></div>
 
             <div className="relative z-10 flex justify-between items-start">
-              <div className="px-3 py-1 rounded-full border border-white/20 text-xs font-bold uppercase tracking-widest text-[#F2BFA4] dark:text-[#D16B3A]">
+              <div className="px-3 py-1 rounded-full border border-white/20 dark:border-white/50 text-xs font-bold uppercase tracking-widest text-[#F2BFA4] dark:text-white">
                 All India Mock
               </div>
-              <div className="flex items-center gap-1 text-white/60 text-sm font-medium">
+              <div className="flex items-center gap-1 text-white/60 dark:text-white/90 text-sm font-medium">
                 <Clock className="w-4 h-4" /> 2 Hours
               </div>
             </div>
             
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-[#F5E7DE] leading-tight max-w-[200px]">Prelims Test Series 2025 (Test 4)</h3>
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#F2BFA4] dark:group-hover:bg-[#D16B3A] group-hover:text-[#2A2522] transition-colors">
+                <h3 className="text-2xl font-bold text-[#F5E7DE] dark:text-white leading-tight max-w-[200px]">Prelims Test Series 2025 (Test 4)</h3>
+                <div className="w-12 h-12 rounded-full border border-white/20 dark:border-white/50 dark:text-white flex items-center justify-center group-hover:bg-[#F2BFA4] dark:group-hover:bg-white group-hover:text-[#2A2522] dark:group-hover:text-[#111] transition-colors">
                   <ArrowRight className="w-5 h-5" />
                 </div>
               </div>
-              <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                <div className="h-full bg-[#F2BFA4] dark:bg-[#D16B3A] w-[45%] rounded-full"></div>
+              <div className="h-1.5 w-full bg-white/10 dark:bg-black/20 rounded-full overflow-hidden">
+                <div className="h-full bg-[#F2BFA4] dark:bg-white w-[45%] rounded-full"></div>
               </div>
-              <p className="text-xs text-white/50 mt-2">45% of students scored above cutoff</p>
+              <p className="text-xs text-white/50 dark:text-white/90 mt-2">45% of students scored above cutoff</p>
             </div>
           </motion.div>
 
