@@ -46,39 +46,31 @@ const Faculty = () => {
  return (
  <section id="faculty" className="py-24 bg-[var(--color-bg-card)] relative overflow-hidden">
  <div className="container mx-auto px-6 lg:px-12">
-  <div className="flex flex-col lg:flex-row gap-16 relative">
-  {/* Left Side: Sticky Title */}
-  <div className="lg:w-1/3 lg:sticky lg:top-32 h-max z-20">
+  <div className="flex flex-col gap-16 relative">
+  {/* Top: Centered Title */}
   <motion.div 
-    initial={{ opacity: 0, x: -30 }}
-    whileInView={{ opacity: 1, x: 0 }}
+    initial={{ opacity: 0, y: -20 }}
+    whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
+    className="text-center max-w-3xl mx-auto"
   >
-    <span className="text-[var(--color-primary)] font-bold uppercase tracking-widest text-sm mb-4 flex items-center gap-2">
+    <span className="text-[var(--color-primary)] font-bold uppercase tracking-widest text-sm mb-4 flex items-center justify-center gap-2">
     <span className="w-8 h-[2px] bg-[var(--color-accent)]"></span>
     Mentorship That Matters
+    <span className="w-8 h-[2px] bg-[var(--color-accent)]"></span>
     </span>
     <h2 className="text-4xl lg:text-5xl font-extrabold text-[var(--color-primary)] mb-6 leading-tight">
-    Meet Our <br/><span className="text-gradient-accent">Teaching Experts</span>
+    Meet Our <span className="text-gradient-accent">Teaching Experts</span>
     </h2>
     <p className="text-[var(--color-secondary)] text-lg mb-8 leading-relaxed font-medium">
     Learn from India's most respected educators who have guided thousands of successful aspirants. Expertise combined with dedication.
     </p>
-    <button className="hidden lg:flex items-center gap-3 text-sm font-bold uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors group">
-    View Full Faculty 
-    <span className="w-10 h-10 rounded-full border border-[var(--color-primary)] group-hover:border-[var(--color-accent)] flex items-center justify-center group-hover:translate-x-2 transition-all">
-    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-    </svg>
-    </span>
-    </button>
   </motion.div>
-  </div>
 
-  {/* Right Side: Stacked Faculty Cards */}
+  {/* Bottom: Zig-Zag Faculty Cards */}
   <motion.div 
-  className="lg:w-2/3 flex flex-col gap-10"
+  className="flex flex-col gap-12 max-w-5xl mx-auto w-full"
   variants={containerVariants}
   initial="hidden"
   whileInView="visible"
@@ -89,7 +81,7 @@ const Faculty = () => {
   key={index}
   variants={itemVariants}
   whileHover={{ y: -8, scale: 1.01 }}
-  className={`flex flex-col md:flex-row gap-8 items-center bg-[var(--color-bg-base)] p-6 md:p-8 rounded-[2rem] border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:shadow-2xl hover:shadow-[var(--color-accent)]/10 transition-all duration-500 group relative overflow-hidden ${index % 2 !== 0 ? 'md:-translate-x-8' : 'md:translate-x-8'}`}
+  className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse md:-translate-x-4' : 'md:flex-row md:translate-x-4'} gap-8 md:gap-12 items-center bg-[var(--color-bg-base)] p-6 md:p-10 rounded-[2rem] border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:shadow-2xl hover:shadow-[var(--color-accent)]/10 transition-all duration-500 group relative overflow-hidden`}
   >
   {/* Decorative outline */}
   <div className="absolute inset-0 border-2 border-[var(--color-accent)]/0 rounded-[2rem] group-hover:border-[var(--color-accent)]/50 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 pointer-events-none"></div>
@@ -107,7 +99,7 @@ const Faculty = () => {
   </div>
   
   {/* Content */}
-  <div className="flex-grow z-10 text-center md:text-left">
+  <div className={`flex-grow z-10 flex flex-col items-center md:items-start ${index % 2 !== 0 ? 'md:items-end text-center md:text-right' : 'text-center md:text-left'} w-full`}>
   <div className="inline-block px-4 py-1.5 bg-[var(--color-bg-card)] rounded-full text-xs font-bold tracking-widest uppercase text-[#D16B3A] mb-4 border border-[var(--color-border)] shadow-sm">
   {member.experience} Experience
   </div>
@@ -116,7 +108,7 @@ const Faculty = () => {
   </h3>
   <p className="text-[var(--color-secondary)] font-medium text-lg mb-6">{member.subject}</p>
   
-  <div className="flex items-center justify-center md:justify-start gap-4">
+  <div className={`flex items-center gap-4 ${index % 2 !== 0 ? 'md:justify-end' : 'md:justify-start'}`}>
   <a href="#" className="w-10 h-10 bg-[var(--color-bg-card)] rounded-full border border-[var(--color-border)] flex items-center justify-center text-[var(--color-secondary)] hover:border-[#1DA1F2] hover:text-[#1DA1F2] transition-all duration-300 transform hover:-translate-y-1 shadow-sm">
   <Twitter className="w-4 h-4" />
   </a>
@@ -131,7 +123,7 @@ const Faculty = () => {
   </motion.div>
   ))}
   
-  <button className="lg:hidden mt-8 mx-auto flex items-center justify-center gap-3 text-sm font-bold uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors group">
+  <button className="mt-8 mx-auto flex items-center justify-center gap-3 text-sm font-bold uppercase tracking-wider text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors group">
   View Full Faculty 
   <span className="w-10 h-10 rounded-full border border-[var(--color-primary)] group-hover:border-[var(--color-accent)] flex items-center justify-center group-hover:translate-x-2 transition-all">
   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
