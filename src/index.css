@@ -55,10 +55,14 @@
   }
 
   .glass-nav {
-    background: rgba(245, 231, 222, 0.85); /* F5E7DE with opacity */
+    background: rgba(245, 231, 222, 0.85); /* Light mode clear bg */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 2px solid var(--color-accent);
+  }
+
+  .dark .glass-nav {
+    background: rgba(26, 22, 20, 0.85); /* Dark mode clear bg (#1A1614 w/ alpha) */
   }
 
   .btn-primary {
