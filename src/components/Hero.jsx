@@ -61,34 +61,54 @@ const Hero = () => {
  </a>
  </motion.div>
 
- {/* Video / App Preview UI */}
- <motion.div 
- initial={{ opacity: 0, y: 40 }}
- animate={{ opacity: 1, y: 0 }}
- transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
- className="mt-20 mx-auto max-w-5xl relative perspective-1000"
- >
- <div className="relative rounded-xl overflow-hidden shadow-[0_0_100px_rgba(37,99,235,0.15)] border border-[var(--color-border)] card-premium p-1 md:p-2 bg-[var(--color-bg-card)]/50 backdrop-blur-3xl transform hover:rotate-0 transition-transform duration-700">
- {/* Toolbar mock */}
- <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-bg-card)]">
- <div className="w-3 h-3 rounded-full bg-[#333]"></div>
- <div className="w-3 h-3 rounded-full bg-[#333]"></div>
- <div className="w-3 h-3 rounded-full bg-[#333]"></div>
- </div>
- {/* Content */}
- <div className="relative aspect-video bg-[var(--color-bg-card)] rounded-b-lg overflow-hidden flex items-center justify-center">
- <img 
- src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
- alt="Classroom Platform" 
- className="w-full h-full object-cover transition-all duration-700"
- />
- <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/40 to-transparent flex items-center justify-center pointer-events-none">
- <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center pointer-events-auto cursor-pointer hover:scale-110 hover:bg-white/20 transition-all">
- <Play className="w-6 h-6 text-[var(--color-primary)] fill-current ml-1" />
- </div>
- </div>
- </div>
- </div>
+  {/* Video / App Preview UI */}
+  <motion.div 
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+  className="mt-20 mx-auto max-w-5xl relative"
+  style={{ perspective: "1500px" }}
+  onMouseMove={(e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const xPct = x / rect.width - 0.5;
+    const yPct = y / rect.height - 0.5;
+    const card = e.currentTarget.querySelector('.mockup-card');
+    if(card) {
+      card.style.transform = `rotateX(${yPct * -15}deg) rotateY(${xPct * 15}deg)`;
+    }
+  }}
+  onMouseLeave={(e) => {
+    const card = e.currentTarget.querySelector('.mockup-card');
+    if(card) {
+      card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    }
+  }}
+  >
+  <div 
+  className="mockup-card relative rounded-2xl overflow-hidden shadow-[0_20px_100px_-20px_rgba(209,107,58,0.25)] border border-[var(--color-border)] card-premium p-1 md:p-2 bg-[var(--color-bg-card)]/80 backdrop-blur-3xl transition-transform duration-300 ease-out will-change-transform"
+  >
+  {/* Toolbar mock */}
+  <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-bg-card)]">
+  <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+  <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+  <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+  </div>
+  {/* Content */}
+  <div className="relative aspect-video bg-[var(--color-bg-card)] rounded-b-xl overflow-hidden flex items-center justify-center group/vid">
+  <img 
+  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+  alt="Classroom Platform" 
+  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover/vid:scale-105"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1614]/60 via-transparent to-transparent flex items-center justify-center pointer-events-none">
+  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center pointer-events-auto cursor-pointer group-hover/vid:scale-110 group-hover/vid:bg-white/20 group-hover/vid:shadow-[0_0_40px_rgba(209,107,58,0.5)] transition-all duration-500">
+  <Play className="w-8 h-8 text-white fill-current ml-2" />
+  </div>
+  </div>
+  </div>
+  </div>
  
  {/* Subtle bottom fade */}
  <div className="absolute -bottom-10 left-0 w-full h-32 bg-gradient-to-t from-[var(--color-bg-base)] to-transparent z-10 pointer-events-none"></div>
