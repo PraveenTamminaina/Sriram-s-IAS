@@ -72,7 +72,7 @@ const OfflineCenters = () => {
                 <img 
                   src={center.image} 
                   alt={center.city} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 blur-[2px] opacity-80 group-hover:blur-0 group-hover:opacity-100 mix-blend-multiply"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-card)] via-transparent to-transparent opacity-90"></div>
                 <div className="absolute bottom-4 left-6">

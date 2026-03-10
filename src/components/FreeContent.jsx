@@ -27,7 +27,7 @@ const FreeContent = () => {
             <img 
               src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=1200&q=80" 
               alt="Answer Writing Masterclass"
-              className="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
+              className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
             />
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-base)] via-transparent to-transparent opacity-90"></div>
