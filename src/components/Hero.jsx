@@ -80,7 +80,7 @@ const Hero = () => {
  <img 
  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
  alt="Classroom Platform" 
- className="w-full h-full object-cover opacity-80 mix-blend-multiply hover:mix-blend-normal transition-all duration-700"
+ className="w-full h-full object-cover transition-all duration-700"
  />
  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/40 to-transparent flex items-center justify-center pointer-events-none">
  <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center pointer-events-auto cursor-pointer hover:scale-110 hover:bg-white/20 transition-all">
