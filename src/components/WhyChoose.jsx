@@ -63,16 +63,16 @@ const WhyChoose = () => {
             
             <div className="relative z-10 sm:w-2/3">
               <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 border border-white/20">
-                <Award className="w-5 h-5 text-[#2A2522]" />
+                <Award className="w-5 h-5 text-[#2A2522] dark:text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#2A2522] mb-2">Proven Track Record</h3>
-              <p className="text-[#5A4E46] leading-relaxed text-sm mix-blend-multiply opacity-90">
+              <h3 className="text-2xl font-bold text-[#2A2522] dark:text-white mb-2">Proven Track Record</h3>
+              <p className="text-[#5A4E46] dark:text-white/90 leading-relaxed text-sm">
                 With 500+ successful selections in the last 5 years, our methodology is tested and proven by toppers time and again.
               </p>
             </div>
-            <div className="relative z-10 bg-[#2A2522] text-[#F5E7DE] p-6 rounded-2xl w-full sm:w-1/3 flex flex-col items-center justify-center border border-[#3A332E]">
+            <div className="relative z-10 bg-[#2A2522] dark:bg-[#111] text-[#F5E7DE] dark:text-white p-6 rounded-2xl w-full sm:w-1/3 flex flex-col items-center justify-center border border-[#3A332E] dark:border-[#333]">
               <span className="text-4xl font-black mb-1">500+</span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#B49682]">Selections</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-[#B49682] dark:text-white/70">Selections</span>
             </div>
           </motion.div>
 
