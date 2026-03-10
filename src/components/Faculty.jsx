@@ -102,7 +102,7 @@ const Faculty = () => {
   <img 
   src={member.image} 
   alt={member.name} 
-  className="w-full h-full object-cover transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-700 blur-[1px] group-hover:blur-0 mix-blend-multiply group-hover:mix-blend-normal"
+  className="w-full h-full object-cover transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-700"
   />
   </div>
   
