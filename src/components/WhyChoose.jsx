@@ -57,22 +57,25 @@ const WhyChoose = () => {
           <motion.div 
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            className="md:col-span-2 bg-[var(--color-accent)] text-[var(--color-bg-base)] rounded-3xl p-8 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-8 relative overflow-hidden group"
+            className="md:col-span-2 bg-[#2A2522] dark:bg-[var(--color-accent)] text-[var(--color-bg-base)] rounded-3xl p-8 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-8 relative overflow-hidden group cursor-pointer"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-[60px] transform translate-x-1/2 -translate-y-1/2 pattern-grid pointer-events-none"></div>
+            {/* Background Texture in Dark block */}
+            <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZiIvPgo8L3N2Zz4=')]"></div>
+
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-[60px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             
             <div className="relative z-10 sm:w-2/3">
-              <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 border border-white/20">
-                <Award className="w-5 h-5 text-[#2A2522] dark:text-white" />
+              <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-4 border border-white/10">
+                <Award className="w-5 h-5 text-[#F2BFA4] dark:text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#2A2522] dark:text-white mb-2">Proven Track Record</h3>
-              <p className="text-[#5A4E46] dark:text-white/90 leading-relaxed text-sm">
+              <h3 className="text-2xl font-bold text-[#F5E7DE] dark:text-white mb-2">Proven Track Record</h3>
+              <p className="text-white/60 dark:text-white/90 leading-relaxed text-sm">
                 With 500+ successful selections in the last 5 years, our methodology is tested and proven by toppers time and again.
               </p>
             </div>
-            <div className="relative z-10 bg-[#2A2522] dark:bg-[#111] text-[#F5E7DE] dark:text-white p-6 rounded-2xl w-full sm:w-1/3 flex flex-col items-center justify-center border border-[#3A332E] dark:border-[#333]">
+            <div className="relative z-10 bg-[#F2BFA4] dark:bg-[#111] text-[#2A2522] dark:text-white p-6 rounded-2xl w-full sm:w-1/3 flex flex-col items-center justify-center border border-[#D9A284] dark:border-white/20">
               <span className="text-4xl font-black mb-1">500+</span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#B49682] dark:text-white/70">Selections</span>
+              <span className="text-[10px] uppercase font-bold tracking-widest text-[#2A2522]/80 dark:text-white/70">Selections</span>
             </div>
           </motion.div>
 

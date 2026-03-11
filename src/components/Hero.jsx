@@ -5,7 +5,7 @@ import { ChevronRight, Play } from 'lucide-react';
 const Hero = () => {
  return (
  <section id="home" className="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-20 overflow-hidden text-center z-10">
- <div className="glow-bg"></div>
+
 
  <div className="container mx-auto px-6 lg:px-12 z-20">
  
